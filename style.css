@@ -10,7 +10,7 @@ body {
 }
 
 #exo4 {
-    width: 600px;
+    width: 100%;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -19,12 +19,12 @@ body {
 
 #dateContainer {
     font-weight: bold;
-    width:600px;
+    width:700px;
     display:flex;
     justify-content: space-around;
     align-items: center;
     background-color: #EAEAEA;
-    padding:10%;
+    padding:8%;
 }
 
 #date {
@@ -33,23 +33,23 @@ body {
     justify-content: space-between;
     align-items: center;
     border-radius: 20px;
-    width:250px;
-    height:350px;
+    width:225px;
+    height:310px;
 }
 
 #dateHeader {
     display: flex;
     justify-content: center;
     align-items: center;
-    height:20%;
+    height:18%;
     width:100%;
-    font-size:4rem;
+    font-size:3rem;
     font-weight: bold;
     color:white;
     text-transform: uppercase;
     background-color: #B03737;
-    border-radius: 30px 30px 0px 0px;
-    border:solid 3px #912B2B;
+    border-radius: 40px 40px 0px 0px;
+    border:solid 4px #912B2B;
     border-bottom: 0px;
 }
 
@@ -58,17 +58,17 @@ body {
     justify-content: center;
     align-items: center;
     width:100%;
-    height:27.5%;
-    font-size: 4rem;
+    height:31%;
+    font-size: 5rem;
     color:#909090;
     background-color: white;
-    border:solid 3px #D3D3D3;
+    border:solid 4px #D3D3D3;
     border-bottom: 0px;
     border-top: 0px;
 }
 
 #dateMonth {
-    border:solid 3px #D3D3D3;
+    border:solid 4px #D3D3D3;
     border-bottom: 0px;
     border-top: 0px;
     text-transform: uppercase;
@@ -78,33 +78,35 @@ body {
     width:100%;
     height:27.5%;
     font-size:4rem;
+    font-weight: bold;
     background-color: white;
     color:#7C7C7C;
 }
 
 #dateFooter {
-    border:solid 3px #912B2B;
+    border:solid 4px #912B2B;
     border-top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:25%;
+    height:22%;
     width:100%;
-    font-size: 3rem;
+    font-size: 2.5rem;
     color:white;
     background-color: #B03737;
-    border-radius: 0px 0px 30px 30px;
+    border-radius: 0px 0px 40px 40px;
     font-weight: bold;
 }
 
 #time {
+    margin-left: 30px;
     color:#474747;
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: bold;
     cursor:pointer;
 }
 
 .timeSeconds {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
