@@ -22,8 +22,8 @@ async function timeLoop() {
         await sleep(1000)
         reykjavik.innerText=timeDisplay(0)
         anchorage.innerText=timeDisplay(-9)
-        saintpetersburg.innerText=timeDisplay(3);
-        brussels.innerText=timeDisplay(1);
+        saintpetersburg.innerText=timeDisplay(3)
+        brussels.innerText=timeDisplay(1)
     }
 }
 timeLoop();
@@ -73,11 +73,7 @@ const exo4TimeSeconds=document.querySelector('#timeSeconds')
 let usFormat=false;
 
 exo4Time.addEventListener('click', () => {
-    if(usFormat) {
-        usFormat=false
-    } else {
-        usFormat=true
-    }
+    usFormat= usFormat ? false : true
 })
 
 async function dateDisplay() {
@@ -93,38 +89,27 @@ async function dateDisplay() {
         exo4Month.innerText = now.toLocaleDateString('en', { month: 'short' });
         exo4Footer.innerText=now.getFullYear()
 
-        let seconds=now.getSeconds()
+        let seconds=now.getSeconds()<10 ? '0'+now.getSeconds() : now.getSeconds()
 
-        if(seconds<10) {
-            seconds='0'+seconds
-        }
+        let minutes=now.getMinutes()<10 ? '0'+now.getMinutes() : now.getMinutes()
 
-        let minutes=now.getMinutes()
-        if(minutes < 10) {
-            minutes='0'+minutes
-        }
+        let hours= now.getHours()<10 ? '0'+now.getHours() : now.getHours()
 
-        let hours= now.getHours()
-        if(hours < 10) {
-            hours='0'+hours
-        }
 
         if(usFormat) {
             const ampm= now.getHours() >= 12 ? 'pm' : 'am'
 
             if(ampm=='pm') {
-                hours= now.getHours() == 12 ? 12 : now.getHours()-12
+                hours= hours == 12 ? 12 : hours-12
                 
                 exo4Time.innerText=hours+':'+minutes+':'
                 createDiv('span',exo4Time,seconds,'timeSeconds')
-                createDiv('span',exo4Time,' '+ampm,'timeSeconds')
+                createDiv('div',exo4Time,' '+ampm,'ampm')
             }
         } else {
             exo4Time.innerText=hours+':'+minutes+':'
             createDiv('span',exo4Time,seconds,'timeSeconds')
         }
-        
-        
         await sleep(1000)
     }
 }

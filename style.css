@@ -99,6 +99,7 @@ body {
 }
 
 #time {
+    position: relative;
     margin-left: 30px;
     color:#474747;
     font-size: 7rem;
@@ -110,3 +111,9 @@ body {
     font-size: 4rem;
 }
 
+.ampm {
+    font-size: 2rem;
+    position: absolute;
+    top:0;
+    right:0;
+}
